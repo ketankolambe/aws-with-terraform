@@ -34,4 +34,4 @@ override.tf.json
 .terraformrc
 terraform.rc
 day_01/.terraform.lock.hcl
-day-02/.terraform.lock.hcl
+day_02/.terraform.lock.hcl
