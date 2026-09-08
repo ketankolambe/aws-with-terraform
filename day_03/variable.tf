@@ -23,3 +23,8 @@ variable "public_ip" {
   default = true
   description = "this for public ip"
 }
+
+variable "vpc_id" {
+  type = string
+  default = "vpc-05be01c3323d1b980"
+}
