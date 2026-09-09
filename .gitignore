@@ -36,3 +36,6 @@ terraform.rc
 day_01/.terraform.lock.hcl
 day_02/.terraform.lock.hcl
 day_03/.terraform.lock.hcl
+day_04/file-prov/.terraform.lock.hcl
+day_04/local-prov/.terraform.lock.hcl
+day_04/remote-exec/.terraform.lock.hcl
