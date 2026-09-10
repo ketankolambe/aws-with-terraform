@@ -8,7 +8,7 @@ resource "aws_instance" "example_3" {
   
      # Local-exec provisioner (runs locally)
   provisioner "local-exec" {
-    when ="destroy"
+    when = destroy
     command = "scp -i C:/Users/ketan/.ssh/down.pem ec2-user@${self.public_ip}:/var/www/html/index.html ./index.html"
   }
 user_data = <<-EOF
