@@ -5,9 +5,9 @@ resource "aws_instance" "example_3" {
 
   associate_public_ip_address = var.public_ip
   #key_name = aws_key_pair.custom_key.key_name
-  security_groups = [aws_security_group.allow_tls.id]
-
+  #security_groups = [aws_security_group.allow_tls.id]     ---if using this the ec2 is getting destroyed not updated so better is to use vpc_security_group_ids instead of security_groups
+vpc_security_group_ids = [aws_security_group.allow_tls.id]
   tags = {
-    Name = "var.tags"
+    Name = var.tags
   }
 }
