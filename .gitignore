@@ -40,3 +40,4 @@ day_04/file-prov/.terraform.lock.hcl
 day_04/local-prov/.terraform.lock.hcl
 day_04/remote-exec/.terraform.lock.hcl
 backup-using-local-prov/remote-exec/.terraform.lock.hcl
+backup-using-local-prov
