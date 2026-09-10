@@ -20,6 +20,6 @@ variable "instance_count" {
 
 variable "public_ip" {
   type = bool
-  default = true
+  default = false
   description = "this for public ip"
 }
