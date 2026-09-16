@@ -15,6 +15,8 @@ variable "vpc_cidr" {
 }
 
 
+
+
 variable "public_subnet_01_cidr" {
   type = string
 }
@@ -63,6 +65,9 @@ variable "private_subnet_03_name" {
   type = string
 }
 
+
+
+
 variable "igw_name" {
   type = string
 }
@@ -71,10 +76,7 @@ variable "public_rt_name" {
   type = string
 }
 
-variable "nat_gw_name" {
-  type = string
-}
 
-variable "private_rt_name" {
+variable "private_rt_name"{
   type = string
 }
