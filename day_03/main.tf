@@ -1,12 +1,3 @@
-resource "aws_security_group" "allow_tls" {
-  name        = "allow_tls"
-  description = "Allow TLS inbound traffic and all outbound traffic"
-  vpc_id      = var.vpc_id
-
-  tags = {
-    Name = "tf-day3-sg"
-  }
-}
 resource "aws_instance" "example_3" {
   ami           = var.ami_id
   instance_type = var.instance_type
