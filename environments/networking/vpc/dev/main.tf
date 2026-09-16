@@ -1,0 +1,21 @@
+module "vpc_module" {
+  source = "../../../../module/networking/vpc"
+  vpc_name = var.vpc_name
+  Environment = var.Environment
+  vpc_cidr = var.vpc_cidr
+  vpc_tag = var.vpc_tag
+  public_subnet_01_cidr = var.public_subnet_01_cidr
+  public_subnet_02_cidr = var.public_subnet_02_cidr
+  public_subnet_03_cidr = var.public_subnet_03_cidr
+  public_subnet_01_name = var.public_subnet_01_name
+  public_subnet_02_name = var.public_subnet_02_name
+  public_subnet_03_name = var.public_subnet_03_name
+  private_subnet_01_cidr = var.private_subnet_01_cidr
+  private_subnet_01_name = var.private_subnet_01_name
+  private_subnet_02_cidr = var.private_subnet_02_cidr
+  private_subnet_02_name = var.private_subnet_02_name
+  private_subnet_03_cidr = var.private_subnet_03_cidr
+  private_subnet_03_name = var.private_subnet_03_name
+  igw_name = var.igw_name
+  public_rt_name = var.public_rt_name
+}
