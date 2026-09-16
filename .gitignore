@@ -42,3 +42,6 @@ day_04/remote-exec/.terraform.lock.hcl
 backup/.terraform.lock.hcl
 backup/index.html
 workspace/.terraform.lock.hcl
+environments/networking/vpc/dev/.terraform.lock.hcl
+nvironments/networking/vpc/qa/.terraform.lock.hcl'
+environments/storage/s3/dev/.terraform.lock.hcl
