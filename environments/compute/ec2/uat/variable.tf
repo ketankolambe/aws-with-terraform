@@ -1,16 +1,18 @@
 variable "ami_id" {
   type = string
-
+  default = "ami-01a00762f46d584a1"
 }
 
 
 variable "subnet_id" {
   type = string
+  default = "subnet-0bafc8a7743e6101e"
   description = "this for the aws subnet id"
 }
 
 variable "instance_type" {
   type = string
+  default = "t3.micro"
   description = "this for the instance type"
 }
 
@@ -28,6 +30,7 @@ variable "public_ip" {
 variable "instance_name" {
   type = string
 }
-variable "security_group_id" {
+
+# variable "security_group_id" {
   
-}
+# }
