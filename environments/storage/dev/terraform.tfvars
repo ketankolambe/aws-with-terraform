@@ -1,3 +1,9 @@
-bucket_name = "fctp_bucket"
+bucket_name = "fctp-bucket0909"
   Environment = "dev"
   bucket_tag = "dev-bucket"
+  versioning ="Enabled"
+  acl = "private"
+  block_public_acls = false
+  block_public_policy = false
+  ignore_public_acls = false
+  restrict_public_buckets = false
