@@ -1,42 +1,39 @@
-name: var-scope
+name: github action var scope 
 
-on:
+on: 
   workflow_dispatch:
 env:
-  workflow_var: i_an_workfolw_scope
+  WORKFLOW_VAR: I_AM_WORKFLOW_SCOPED
 jobs:
-  job1:
+  job1: 
     runs-on: ubuntu-22.04
     env:
-      job1_var: job1_scoped
-    steps:
-      -name: inspect scopejob 1 step 1
-      env:
+      JOB1_VAR: I_AM_JOB1_SCOPED
+    steps: 
+      - name: inspect scopes job 1 step 1
+        env: 
           STEP1_VAR: I_AM_STEP1_SCOPED
-      run: |
-        echo "workflow_var: ${{ env.workflow_var }}"
-        echo "job1_var: ${{ env.job1_var }}"
-        echo "STEP1_VAR: ${{ env.STEP1_VAR }}"
-
-      steps:
-      -name: inspect scopejob 1 step 2
-      env:
-          STEP1_VAR: I_AM_STEP1_SCOPED
-      run: |
-        echo "workflow_var: ${{ env.workflow_var }}"
-        echo "job1_var: ${{ env.job1_var }}"
-        echo "STEP1_VAR: ${{ env.STEP1_VAR }}"
+        run: |
+          echo "WORKFLOW_VAR:  $WORKFLOW_VAR" 
+          echo "JOB1_VAR: $JOB1_VAR"
+          echo "STEP1_VAR: $STEP1_VAR"
+        
+      - name: inspect scopes job 1 step 2
+        run: |
+          echo "WORKFLOW_VAR:  $WORKFLOW_VAR" 
+          echo "JOB1_VAR: $JOB1_VAR"
+          echo "STEP1_VAR: ${STEP1_VAR:-<UNSET>}"
 
 
-  job2:
+  job2: 
     runs-on: ubuntu-22.04
     env:
-      job1_var: job2_scoped
-    steps:
-      -name: inspect scopejob 1 step 1
-      env:
+      JOB1_VAR: I_AM_JOB2_SCOPED
+    steps: 
+      - name: inspect scopes job 1 step 1
+        env: 
           STEP1_VAR: I_AM_STEP1_SCOPED
-      run: |
-        echo "workflow_var: ${{ env.workflow_var }}"
-        echo "job1_var: ${{ env.job1_var }}"
-        echo "STEP1_VAR: ${{ env.STEP1_VAR }}"
+        run: |
+          echo "WORKFLOW_VAR:  $WORKFLOW_VAR" 
+          echo "JOB1_VAR: ${JOB1_VAR:-<UNSET>}"
+          echo "STEP1_VAR: ${STEP1_VAR:-<UNSET>}"
