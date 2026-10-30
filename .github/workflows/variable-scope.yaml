@@ -1,0 +1,42 @@
+name: var-scope
+
+on:
+  workflow_dispatch:
+env:
+  workflow_var: i_an_workfolw_scope
+jobs:
+  job1:
+    runs-on: ubuntu-22.04
+    env:
+      job1_var: job1_scoped
+    steps:
+      -name: inspect scopejob 1 step 1
+      env:
+          STEP1_VAR: I_AM_STEP1_SCOPED
+      run: |
+        echo "workflow_var: ${{ env.workflow_var }}"
+        echo "job1_var: ${{ env.job1_var }}"
+        echo "STEP1_VAR: ${{ env.STEP1_VAR }}"
+
+      steps:
+      -name: inspect scopejob 1 step 2
+      env:
+          STEP1_VAR: I_AM_STEP1_SCOPED
+      run: |
+        echo "workflow_var: ${{ env.workflow_var }}"
+        echo "job1_var: ${{ env.job1_var }}"
+        echo "STEP1_VAR: ${{ env.STEP1_VAR }}"
+
+
+  job2:
+    runs-on: ubuntu-22.04
+    env:
+      job1_var: job2_scoped
+    steps:
+      -name: inspect scopejob 1 step 1
+      env:
+          STEP1_VAR: I_AM_STEP1_SCOPED
+      run: |
+        echo "workflow_var: ${{ env.workflow_var }}"
+        echo "job1_var: ${{ env.job1_var }}"
+        echo "STEP1_VAR: ${{ env.STEP1_VAR }}"
