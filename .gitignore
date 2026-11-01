@@ -14,9 +14,7 @@
 crash.log
 crash.*.log
 
-# Exclude all variable files by default as they typically contain secrets
-*.tfvars
-*.tfvars.json
+
 
 # Ignore override files as they are used locally to override resources
 override.tf
@@ -45,3 +43,9 @@ workspace/.terraform.lock.hcl
 environments/networking/vpc/dev/.terraform.lock.hcl
 nvironments/networking/vpc/qa/.terraform.lock.hcl'
 environments/storage/s3/dev/.terraform.lock.hcl
+environments/compute/ec2/dev/.terraform.lock.hcl
+environments/compute/ec2/prod/.terraform.lock.hcl
+environments/compute/ec2/qa/.terraform.lock.hcl
+environments/networking/vpc/prod/.terraform.lock.hcl
+environments/networking/vpc/uat/.terraform.lock.hcl
+environments/storage/dev/.terraform.lock.hcl

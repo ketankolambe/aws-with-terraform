@@ -1,6 +1,6 @@
 module "vpc_module" {
   source = "../../../../module/networking/vpc"
-  vpc_name = var.vpc_name
+  vpc_id = var.vpc_id
   Environment = var.Environment
   vpc_cidr = var.vpc_cidr
   vpc_tag = var.vpc_tag
@@ -18,4 +18,6 @@ module "vpc_module" {
   private_subnet_03_name = var.private_subnet_03_name
   igw_name = var.igw_name
   public_rt_name = var.public_rt_name
+  nat_gw_name = var.nat_gw_name
+  private_rt_name =var.private_rt_name
 }

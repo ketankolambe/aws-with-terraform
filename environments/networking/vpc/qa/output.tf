@@ -1,5 +1,5 @@
-output "vpc_name" {
-  value = module.vpc_module.vpc_name
+output "vpc_id" {
+  value = module.vpc_module.vpc_id
 }
 
 output "public_subnet_01_id" {

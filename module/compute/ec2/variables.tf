@@ -1,82 +1,33 @@
-variable "vpc_name" {
+variable "ami_id" {
   type = string
-}
 
-variable "Environment" {
- type = string
-}
-
-variable "vpc_tag" {
-  type = string
-}
-
-variable "vpc_cidr" {
-  type = string
 }
 
 
-
-
-variable "public_subnet_01_cidr" {
+variable "subnet_id" {
   type = string
+  description = "this for the aws subnet id"
 }
 
-variable "public_subnet_01_name" {
+variable "instance_type" {
   type = string
+  description = "this for the instance type"
 }
 
-variable "public_subnet_02_cidr" {
-  type = string
+variable "instance_count" {
+  type = number
+  default = 1
 }
 
-variable "public_subnet_02_name" {
-  type = string
+variable "public_ip" {
+  type = bool
+  default = true
+  description = "this for public ip"
 }
 
-variable "public_subnet_03_cidr" {
+variable "instance_name" {
   type = string
 }
-
-variable "public_subnet_03_name" {
-  type = string
-}
-
-variable "private_subnet_01_cidr" {
-  type = string
-}
-
-variable "private_subnet_01_name" {
-  type = string
-}
-
-variable "private_subnet_02_cidr" {
-  type = string
-}
-
-variable "private_subnet_02_name" {
-  type = string
-}
-
-variable "private_subnet_03_cidr" {
-  type = string
-}
-
-variable "private_subnet_03_name" {
-  type = string
-}
-
-
-
-
-variable "igw_name" {
-  type = string
-}
-
-variable "public_rt_name" {
-  type = string
-}
-
-
-variable "private_rt_name"{
-  type = string
+variable "security_group_id" {
+  
 }

@@ -1,4 +1,4 @@
-variable "vpc_name" {
+variable "vpc_id" {
   type = string
 }
 
@@ -68,5 +68,13 @@ variable "igw_name" {
 }
 
 variable "public_rt_name" {
+  type = string
+}
+
+variable "nat_gw_name" {
+  type = string
+}
+
+variable "private_rt_name" {
   type = string
 }

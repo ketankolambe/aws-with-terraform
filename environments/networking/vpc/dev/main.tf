@@ -1,6 +1,6 @@
 module "vpc_module" {
   source = "../../../../module/networking/vpc"
-  vpc_name = var.vpc_name
+  vpc_id = var.vpc_id
   Environment = var.Environment
   vpc_cidr = var.vpc_cidr
   vpc_tag = var.vpc_tag
